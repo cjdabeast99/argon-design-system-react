@@ -1,28 +1,11 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
 import { Container, Row } from "reactstrap";
 
 // core components
-import DemoNavbar from "components/Navbars/DemoNavbar.js";
-import CardsFooter from "components/Footers/CardsFooter.js";
+import FreedomNavbar from "components/Navbars/FreedomNavbar.js";
+import FreedomFooter from "components/Footers/FreedomFooter.js";
 
 // index page sections
 import Hero from "./IndexSections/Hero.js";
@@ -55,7 +38,7 @@ class Index extends React.Component {
   render() {
     return (
       <>
-        <DemoNavbar />
+        <FreedomNavbar />
         <main ref="main">
           <Hero />
           <Buttons />
@@ -90,7 +73,7 @@ class Index extends React.Component {
           <Login />
           <Download />
         </main>
-        <CardsFooter />
+        <FreedomFooter />
       </>
     );
   }

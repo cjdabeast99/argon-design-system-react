@@ -18207,7 +18207,7 @@ textarea[resize="horizontal"] {
   background: #1fa2ff;
 }
 .section-shaped .shape-default {
-  background: linear-gradient(150deg, #7795f8 15%, #6772e5 70%, #555abf 94%);
+  background: linear-gradient(150deg, #ff2525 15%, #b75454 70%, #994646 94%);
 }
 .section-shaped .shape-default :nth-child(1) {
   background: #7795f8;
@@ -18359,7 +18359,7 @@ textarea[resize="horizontal"] {
   background: linear-gradient(150deg, #281483 15%, #8f6ed5 70%, #d782d9 94%);
 }
 .section-shaped .shape-style-1.shape-default {
-  background: linear-gradient(150deg, #7795f8 15%, #6772e5 70%, #555abf 94%);
+  background: linear-gradient(150deg, #ff2525 15%, #b75454 70%, #994646 94%);
 }
 .section-shaped .shape-style-1.shape-light {
   background: linear-gradient(
