@@ -50,7 +50,6 @@ class FreedomNavbar extends React.Component {
   render() {
 
     const { isDarkened } = this.props;
-    console.log(isDarkened);
     const navbarClass = isDarkened ? 'darkened-navbar' : '';
 
     return (
@@ -115,6 +114,34 @@ class FreedomNavbar extends React.Component {
                     </span>
                     </NavLink>
                   </NavItem>
+                  <NavItem to="/" tag={Link}>
+                    <NavLink
+                      className="nav-link-icon"
+                    >
+                    <span className="nav-link-inner--text ml-2">
+                      Quality
+                    </span>
+                    </NavLink>
+                  </NavItem>
+                  <NavItem to="/" tag={Link}>
+                    <NavLink
+                      className="nav-link-icon"
+                    >
+                    <span className="nav-link-inner--text ml-2">
+                      Market
+                    </span>
+                    </NavLink>
+                  </NavItem>
+                  <NavItem to="/" tag={Link}>
+                    <NavLink
+                      className="nav-link-icon"
+                    >
+                    <span className="nav-link-inner--text ml-2">
+                      Portal
+                    </span>
+                    </NavLink>
+                  </NavItem>
+                  {/*
                   <NavItem>
                   <UncontrolledDropdown nav>
                     <DropdownToggle nav>
@@ -128,12 +155,13 @@ class FreedomNavbar extends React.Component {
                     </DropdownMenu>
                   </UncontrolledDropdown>
                   </NavItem>
+                  */}
                 </Nav>
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="https://www.facebook.com/creativetim"
+                      href="https://www.facebook.com/freedomusafl/"
                       id="tooltip333589074"
                       target="_blank"
                     >
@@ -143,13 +171,13 @@ class FreedomNavbar extends React.Component {
                       </span>
                     </NavLink>
                     <UncontrolledTooltip delay={0} target="tooltip333589074">
-                      Like us on Facebook
+                      Follow us on Facebook
                     </UncontrolledTooltip>
                   </NavItem>
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="https://www.instagram.com/creativetimofficial"
+                      href="#"
                       id="tooltip356693867"
                       target="_blank"
                     >
@@ -165,7 +193,7 @@ class FreedomNavbar extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="https://twitter.com/creativetim"
+                      href="https://twitter.com/freedomics"
                       id="tooltip184698705"
                       target="_blank"
                     >
@@ -176,6 +204,22 @@ class FreedomNavbar extends React.Component {
                     </NavLink>
                     <UncontrolledTooltip delay={0} target="tooltip184698705">
                       Follow us on Twitter
+                    </UncontrolledTooltip>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      className="nav-link-icon"
+                      href="https://www.linkedin.com/company/freedomusa"
+                      id="tooltip184698706"
+                      target="_blank"
+                    >
+                      <i className="fa fa-linkedin-square" />
+                      <span className="nav-link-inner--text d-lg-none ml-2">
+                        Twitter
+                      </span>
+                    </NavLink>
+                    <UncontrolledTooltip delay={0} target="tooltip184698706">
+                      Follow us on LinkedIn
                     </UncontrolledTooltip>
                   </NavItem>
                 </Nav>
