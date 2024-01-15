@@ -125,7 +125,7 @@ class FreedomFooter extends React.Component {
                   |
                   <NavItem>
                     <NavLink
-                      href="email:sales@freedomusa.com"
+                      href="mailto:sales@freedomusa.com"
                     >
                       sales@freedomusa.com
                     </NavLink>

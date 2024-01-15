@@ -1,24 +1,12 @@
 import React from "react";
-// nodejs library that concatenates classes
-import classnames from "classnames";
 
 // reactstrap components
-import {
-  TabContent, 
-  TabPane, 
-  Nav, 
-  NavItem, 
-  NavLink,  
+import {  
   Badge,
   Button,
   Card,
   CardBody,
   CardImg,
-  FormGroup,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   Container,
   Row,
   Col,
@@ -34,6 +22,7 @@ import Tabs from "../IndexSections/FreedomMainTabs.js";
 
 // Custom components
 import ScrollFade from "components/Custom/ScrollFade";
+import Modals from "../IndexSections/GeneralModals.js";
 
 import '../../assets/css/tabs.css';
 
@@ -43,10 +32,17 @@ class Landing extends React.Component {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
+  };
+
+  constructor(props) {
+    super(props);
+    this.modalsRef = React.createRef();
   }
+
   render() {
     return (
       <>
+        <Modals ref={this.modalsRef} />
         <FreedomNavbar />
         <main ref="main">
           <div className="position-relative">
@@ -77,7 +73,7 @@ class Landing extends React.Component {
                         <Button
                           className="btn-icon mb-3 mb-sm-0"
                           color="info"
-                          href="#"
+                          href="mailto:sales@freedomusa.com"
                         >
                           <span className="btn-inner--icon mr-1">
                             <i className="fa fa-rocket" />
@@ -146,8 +142,26 @@ class Landing extends React.Component {
                           <Button
                             className="mt-4"
                             color="primary"
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
+                            onClick={() => this.modalsRef.current.toggleModal("defaultModal", {
+                              title: "Stability & Growth",
+                              desc: `
+                              o	In business since 1999 with a <b class="shimmer">compelling growth</b> model and business sense focused on quality.
+                              <br/><br/>
+                              o	Fireworks kick off our <b class="shimmer">25th Anniversary</b> with the beginnings of another major era of growth, communication, and branding to clearly separate ourselves from everyone else.
+                              <br/><br/>
+                              o	Continuously positioning ourselves <b class="shimmer">at the forefront</b> of the finest Customer Service, access to high quality parts, and internal infrastructure to support long-term expansion.
+                              <br/><br/>
+                              o	<b class="shimmer">Creating a new definition for “distributor”</b>.
+                              <br/><br/>
+                              o	Responsible to our Customers and the industries by utilizing best practices and <b class="shimmer">remaining current with industry changes</b>.
+                              <br/><br/>
+                              o	Freedom continues to reach <b class="shimmer">new heights</b> as we recently gained more capacity at headquarters by growing into our second building, and we have new global facilities opening.
+                              <br/><br/>
+                              o	Cultivate company culture on <a href="#">Social Responsibility and Environmental Sustainability</a> throughout our practices.
+                              <br/><br/>
+                              o	<b class="shimmer">Freedom focuses</b> on longterm relationships with quality, listening and integration.
+                              `,
+                            })}
                           >
                             Learn more
                           </Button>
@@ -181,8 +195,22 @@ class Landing extends React.Component {
                           <Button
                             className="mt-4"
                             color="success"
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
+                            onClick={() => this.modalsRef.current.toggleModal("defaultModal", {
+                              title: "Unmatched Access",
+                              desc: `
+                              o	Fully <b class="shimmer">expect</b> to receive the best experience. Listening, connecting and proving is our model.
+                              <br/><br/>
+                              o	Huge part information database to help make <b class="shimmer">quick</b> decisions.
+                              <br/><br/>
+                              o	<b class="shimmer">24/7</b> inquiries and purchases through our website.
+                              <br/><br/>
+                              o	Building <b class="shimmer">tools</b> for more seamless communication.
+                              <br/><br/>
+                              o	Customer Service <b class="shimmer">experience</b> is monitored so that you feel rewarded.
+                              <br/><br/>
+                              o	Visit our locations any time.
+                              `,
+                            })}
                           >
                             Learn more
                           </Button>
@@ -216,8 +244,18 @@ class Landing extends React.Component {
                           <Button
                             className="mt-4"
                             color="warning"
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
+                            onClick={() => this.modalsRef.current.toggleModal("defaultModal", {
+                              title: "Stability & Growth",
+                              desc: `
+                              o	We are here for serious long-term <b class="shimmer">relationships</b> and meeting the requirements of each contract.
+                              <br/><br/>
+                              o	We like an old-fashioned phone call, and we have the infrastructure and teams to <b class="shimmer">link</b> to your management and communication software. 
+                              <br/><br/>
+                              o	Risk managed with every order.
+                              <br/><br/>
+                              o	Operating at the highest level of <b class="shimmer">integrity</b> for over two decades.                              
+                              `,
+                            })}
                           >
                             Learn more
                           </Button>
@@ -462,7 +500,7 @@ class Landing extends React.Component {
                           block
                           className="btn-white"
                           color="default"
-                          href="#"
+                          href="mailto:sales@freedomusa.com"
                           size="lg"
                         >
                           Get Started

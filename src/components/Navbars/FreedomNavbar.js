@@ -114,24 +114,46 @@ class FreedomNavbar extends React.Component {
                     </span>
                     </NavLink>
                   </NavItem>
-                  <NavItem to="/" tag={Link}>
-                    <NavLink
-                      className="nav-link-icon"
-                    >
-                    <span className="nav-link-inner--text ml-2">
-                      Quality
-                    </span>
-                    </NavLink>
+                  <NavItem style={{margin:"unset"}}>
+                  <UncontrolledDropdown nav>
+                    <DropdownToggle nav>
+                      <i className="ni ni-collection d-lg-none mr-1" />
+                      <span className="nav-link-inner--text" style={{fontSize:"1rem"}}>Quality</span>
+                    </DropdownToggle>
+                    <DropdownMenu>
+                      <DropdownItem to="/" tag={Link}>
+                        Quality Manager
+                      </DropdownItem>
+                      <DropdownItem to="/" tag={Link}>
+                        Certifications and Memberships
+                      </DropdownItem>
+                      <DropdownItem to="/" tag={Link}>
+                        Inspection Process
+                      </DropdownItem>
+                      <DropdownItem to="/" tag={Link}>
+                        Shipping
+                      </DropdownItem>
+                      <DropdownItem to="/" tag={Link}>
+                        IOS Supplier Survey
+                      </DropdownItem>
+                      <DropdownItem to="/" tag={Link}>
+                        Customer Terms and Conditions
+                      </DropdownItem>
+                    </DropdownMenu>
+                  </UncontrolledDropdown>
                   </NavItem>
-                  <NavItem to="/" tag={Link}>
+                  <NavItem>
                     <NavLink
                       className="nav-link-icon"
+                      href="https://ecomm.freedomusa.com/"
+                      target="_blank"
                     >
                     <span className="nav-link-inner--text ml-2">
                       Market
                     </span>
                     </NavLink>
                   </NavItem>
+                  {/*
                   <NavItem to="/" tag={Link}>
                     <NavLink
                       className="nav-link-icon"
@@ -140,20 +162,6 @@ class FreedomNavbar extends React.Component {
                       Portal
                     </span>
                     </NavLink>
-                  </NavItem>
-                  {/*
-                  <NavItem>
-                  <UncontrolledDropdown nav>
-                    <DropdownToggle nav>
-                      <i className="ni ni-collection d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Examples</span>
-                    </DropdownToggle>
-                    <DropdownMenu>
-                      <DropdownItem to="/landing-page" tag={Link}>
-                        Landing
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
                   </NavItem>
                   */}
                 </Nav>
